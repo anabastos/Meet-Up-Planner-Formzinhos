@@ -1,0 +1,23 @@
+{
+  "name": "project1-meet-up-event-planner",
+  "version": "1.0.0",
+  "description": "Project 1 - Udacity Nanodegree",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anabastos/Project-1-Nanodegree-Meet-Up-Event-Planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anabastos/Project-1-Nanodegree-Meet-Up-Event-Planner/issues"
+  },
+  "homepage": "https://github.com/anabastos/Project-1-Nanodegree-Meet-Up-Event-Planner#readme",
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "gulp": "^3.9.1"
+  }
+}
