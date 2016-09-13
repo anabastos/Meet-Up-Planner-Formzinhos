@@ -1,0 +1,172 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet-Up Event Planner</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row page-header">
+      <h3>Meet-Up Event Planner</h3>
+    </div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-pills nav-justified" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#account-sec" role="tab" data-toggle="tab" aria-expanded="true">Account</a>
+      </li>
+      <li role="presentation">
+        <a href="#event-sec" role="tab" data-toggle="tab" aria-expanded="false">Event</a>
+      </li>
+      <li role="presentation">
+        <a href="#confirmation-sec" role="tab" data-toggle="tab" aria-expanded="false">Confirmation</a>
+      </li>
+    </ul>
+
+    <div role="main">
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="account-sec">
+          <form method="post" id="usrForm" class="form-horizontal">
+            <div id="account-sec" role="tabpanel" class="tab-pane fade in active">
+              <div class="form-group">
+                <label for="Name" class="col-lg-2 control-label">Name</label>
+                <div class="col-lg-10">
+                  <input type="text" id="Name" class="form-control validate" placeholder="Full name" required="" autocomplete="name" autofocus>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Email" class="col-lg-2 control-label">Email</label>
+                <div class="col-lg-10">
+                  <input type="email" class="form-control validate" id="Email" placeholder="name@example.com" required="" autocomplete="email">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="Password" class="col-lg-2 control-label">Password</label>
+                <div class="col-lg-10">
+                  <input type="password" id="Password" class="form-control validate" placeholder="Enter Password" required="" autocomplete="password">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="PasswordC" class="col-lg-2 control-label">Confirm Password</label>
+                <div class="col-lg-10">
+                  <input type="password" id="PasswordC" class="form-control validate" placeholder="Enter Password" required="" autocomplete="password">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="PhoneNumA" class="col-lg-2 control-label">Whatev (Optional)</label>
+                <div class="col-lg-10">
+                  <input id="PhoneNumA" class="form-control validate" placeholder="djisd" autocomplete="tel">
+                </div>
+              </div>
+              
+              <br>
+              <div class="form-group">
+                <div class="col s10">
+                  <input type="checkbox" class="filled-in" id="additionalInfoC">
+                  <label for="additionalInfoC">Additional information</label>
+                </div>
+              </div>
+
+              <div id="additionalInfo" style="display:none">
+                <div class="form-group">
+                  <label for="CountryS" class="active col-lg-2 control-label">Guest List</label>
+                  <div class="col-lg-10">
+                    <input class="form-control validate" required="" id="CountryS" placeholder="USA" autocomplete="shipping country">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="event-sec">
+          <form class="col s12">
+            <div class="form-group">
+              <label for="AddressS" class="active col-lg-2 control-label">Name of the event</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control validate" required="" id="AddressS" autocomplete="shipping street-address">
+              </div>
+            </div>
+
+              <div class="form-group">
+                <label for="host" class="active col-lg-2 control-label">Event Host</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control validate" required="" id="host" placeholder="Individual’s name or an organization" autocomplete="name">
+                </div>
+              </div>
+
+            <div class="form-group">
+              <label for="eventType" class="active col-lg-2 control-label">Type of the event
+                <input id="eventType "list="types" class="form-control validate" required="" placeholder="Birthday Party"/></label>
+                <datalist id="types">
+                  <option value="Birthday Party">
+                  <option value="Conference Talk">
+                  <option value="Wedding">
+                </datalist>
+              </div>
+
+              <div class="form-inline">
+                <div class="form-group">
+                  <label for="startDate" class="active col-lg-2 control-label">Start Date and Time</label>
+                  <div class="col-lg-10">
+                    <input type="datetime-local" class="form-control validate" required="" id="startDate">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="endDate" class="active col-lg-2 control-label">End Date and Time</label>
+                  <div class="col-lg-10">
+                    <input type="datetime-local" class="form-control validate" required="" id="endDate">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CountryS" class="active col-lg-2 control-label">Location</label>
+                <div class="col-lg-10">
+                  <input class="form-control validate" required="" id="CountryS" placeholder="USA" autocomplete="shipping country">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CountryS" class="active col-lg-2 control-label">Guest List</label>
+                <div class="col-lg-10">
+                  <p class="text-primary"><span class="glyphicon glyphicon-plus"></span> Add a guest</p>
+                  <input class="form-control validate" required="" id="CountryS" placeholder="USA" autocomplete="shipping country">
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+
+          <div role="tabpanel" class="tab-pane" id="confirmation-sec">
+            <form class="col s12">
+              <h4>Confirm your event information:</h4>
+              <p id="display"> 
+                ok bb
+              </p>
+              <br>
+                
+              <div class="col-lg-12">
+                <button type="submit" id="butConfirm" class="btn btn-default">Confirm</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <script src="app.js"></script>
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+    </div>
+  </body>
+  </html>
