@@ -19,5 +19,8 @@
   "devDependencies": {
     "browser-sync": "^2.15.0",
     "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "yarn": "^0.17.10"
   }
 }
